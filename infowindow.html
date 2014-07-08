@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Warung Pecel V1.0</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+  <div class="iw-wrap">
+	<div class="iw-content">
+		<div class="iw-head clearfix">
+			<div class="ftd-org">
+				<a href="#" class="ftd-ftimg"><img src="img/uploads/ava_1.jpg" alt="" /></a>
+				<div class="ftd-data vcard">
+					<p class="org">Warung Pecel Barokah</p>
+					<p class="adr"><span class="street-address">Kepyar, Purwantoro</span></p>
+					<div class="ftd-tools">
+						<ul class="clearfix">
+							<li><a href="'+fWeb+'"><i class="i-web"></i>Visit Website</a></li>
+							<li><a href="#" class="keep-centered" data-index="'+i+'"><i class="i-centered"></i>Keep Centered</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="iw-body">
+			<div class="iw-body-tabs">
+				<ul class="clearfix">
+					<li><a href="#ftd-info">Info Warung</a></li>
+					<li><a href="#ftd-tweets" class="last-of-type">Tweet Terbaru</a></li>
+				</ul>
+			</div>
+			<div class="iw-body-wrap">
+				<div class="iw-body-main" id="ftd-info">
+					<div class="iw-box clearfix">
+						<div class="iw-grid2 iw-ftimg"><img src="img/uploads/pecel_1.jpg" alt="" /></div>
+						<div class="iw-grid1">
+							<p><strong>E-Mail</strong></p>
+							<p><a href="mailto:johndoe@gmail.com">johndoe@gmail.com</a></p>
+							<br />
+							<p><strong>Buka Hari Ini Jam</strong></p>
+							<p>08:00 - 12:00</p>
+							<br />
+							<p><strong>Nomor Telepon</strong></p>
+							<p>0273 415 292</p>
+						</div>
+					</div>
+				</div>
+				<div class="iw-body-main" id="ftd-tweets">
+					<div class="iw-box clearfix">
+						<div class="iw-grid3">
+							<div class="tweets" title="herihehe"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/jsapi?key=ABQIAAAAaLt1T5sPsyhTpgKN_0jCbRT8hrThqFFwOXP-IEhSYXDp8-u7xhSl6pcL_2gh2D_4nnQCD_QcMtrpUg"></script>
+  
+  <!-- jQuery Plugins -->
+  <script type="text/javascript" src="js/mylibs/jquery.tweet.js"></script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ed23b95022a48f6"></script>
+  
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$(".tweets").each(function(){
+			var username = $(this).attr("title");
+			$(this).empty().tweet({username: username,count: 3,loading_text: "loading tweets...",template: "{text}  {time}"});
+		});
+		
+		$(".iw-body").myTabs({hidewhat:".iw-body-main",controller:".iw-body-tabs a"});
+	});
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
